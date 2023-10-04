@@ -1,0 +1,14 @@
+  //create the For Loop 
+  @for $i from 1 through 12 {
+    $w: calc($i/12) * 100%;
+    .medium-#{$i} {flex-basis: $w;}  //.medium-i의 클라스를 만들고 flex-basis를 지정함
+  }
+
+  nav ul {
+    width: 200px;
+  }
+
+  @media only screen and (min-width: 35rem) {
+    .description{grid-template-columns: 6fr 2fr;}
+    .description img {padding: 1rem;}
+  }

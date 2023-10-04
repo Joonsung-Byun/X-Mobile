@@ -1,0 +1,37 @@
+header,#headerWrapper, #mainWrapper,  footer {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  button {
+    display: none;
+  }
+}
+
+nav ul, ul.open {
+  display: flex;
+  position: relative;
+  width: auto;
+  background-color: white;
+}
+
+nav ul li {
+  padding: 0;
+}
+
+@media only screen and (min-width: 60rem) {
+  .description{grid-template-columns: 8fr 2fr;}
+  .description img {padding: 1rem;}
+}
+
+  //create the For Loop 
+  @for $i from 1 through 12 {
+    $w: calc($i/12) * 100%;
+    .large-#{$i} {flex-basis: $w;}  //.large-i의 클라스를 만들고 flex-basis를 지정함
+  }
